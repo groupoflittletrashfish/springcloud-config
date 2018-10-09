@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+#      eureka-server的路径,如果是集群服务器，把所有服务器的地址都写上
+      defaultZone: http://127.0.0.1:8091/eureka/,http://127.0.0.1:8092/eureka/，http://127.0.0.1:8093/eureka/
+server:
+  port: 8096
+spring:
+  application:
+#  为应用命名，该名称会在server中的Application显示
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/groupoflittletrashfish/springcloud-config.git
+          username: groupoflittletrashfish
+          password: 1e5ghj9
